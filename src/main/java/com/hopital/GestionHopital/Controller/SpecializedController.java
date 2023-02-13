@@ -18,7 +18,7 @@ public class SpecializedController {
 
     @PostMapping("/create")
     public ResponseEntity<SpecializedService> createNewSpecialService(@RequestBody SpecializedService specializedService){
-        return new ResponseEntity<SpecializedService>(HttpStatus.OK);
+        return new ResponseEntity<SpecializedService>(HttpStatus.CREATED);
     }
 
 

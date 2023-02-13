@@ -17,6 +17,7 @@ public class Patient {
     private Integer patient_phone;
     private LocalDate patient_dob;
     private String patient_email;
+    private String patient_genre;
     private String patient_notes;
 
 //   Constructor
@@ -24,13 +25,15 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(String patient_name, String patient_address, Integer patient_phone, LocalDate patient_dob, String patient_email, String patient_notes) {
+    public Patient(Long patient_id, String patient_name, String patient_address, Integer patient_phone, LocalDate patient_dob, String patient_email,String patient_genre, String patient_notes) {
+        this.patient_id = patient_id;
         this.patient_name = patient_name;
         this.patient_address = patient_address;
         this.patient_phone = patient_phone;
         this.patient_dob = patient_dob;
         this.patient_email = patient_email;
         this.patient_notes = patient_notes;
+        this.patient_genre = patient_genre;
     }
 
 //    Getter & Setter
@@ -81,6 +84,14 @@ public class Patient {
 
     public void setPatient_email(String patient_email) {
         this.patient_email = patient_email;
+    }
+
+    public String getPatient_genre() {
+        return patient_genre;
+    }
+
+    public void setPatient_genre(String patient_genre) {
+        this.patient_genre = patient_genre;
     }
 
     public String getPatient_notes() {

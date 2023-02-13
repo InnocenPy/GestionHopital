@@ -13,6 +13,7 @@ public class DoctorServiceImp implements DoctorService{
     @Autowired
     private final DoctorRepository doctorRepository;
 
+    // Constructor
     public DoctorServiceImp(DoctorRepository doctorRepository) {
         this.doctorRepository = doctorRepository;
     }

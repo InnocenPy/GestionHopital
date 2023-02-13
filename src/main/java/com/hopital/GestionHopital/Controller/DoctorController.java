@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Controller
+//@Controller
 @RestController
 @RequestMapping("/doctors")
 public class DoctorController {
@@ -26,7 +26,7 @@ public class DoctorController {
     }
 
     @PostMapping("/create")
-    public Doctors getDoctors(Doctors doctors){
+    public Doctors creatDoctors(Doctors doctors){
         return doctorService.create(doctors);
     }
 

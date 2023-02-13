@@ -29,7 +29,7 @@ public class PatientServiceImp implements PatientService {
     @Override
     public Optional<Patient> modifier(Long id, Patient patient) {
         return Optional.ofNullable(patientRepository.findById(id).map(p -> {
-
+            p.setPatient_id(p.getPatient_id());
             p.setPatient_name(p.getPatient_name());
             p.setPatient_address(p.getPatient_address());
             p.setPatient_dob(p.getPatient_dob());
